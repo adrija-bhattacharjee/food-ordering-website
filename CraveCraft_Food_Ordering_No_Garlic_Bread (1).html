@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CraveCraft — Food, Your Way</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+*{box-sizing:border-box;margin:0;padding:0} :root{--bg:#fbfaf7;--surface:#fff;--text:#171717;--muted:#737373;--line:#e9e5de;--accent:#ff5b35;--accent2:#ff9a3d;--soft:#fff0e9;--dark:#191817;--shadow:0 20px 60px rgba(31,24,18,.11)}body.dark{--bg:#11110f;--surface:#1b1a17;--text:#f7f3ed;--muted:#aaa39a;--line:#302e29;--soft:#2a211d;--dark:#fff}.dark .topbar{background:rgba(17,17,15,.86)}body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);transition:.25s}button,input{font:inherit}button{cursor:pointer;border:0} .topbar{height:76px;padding:0 5.5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(251,250,247,.86);backdrop-filter:blur(16px);z-index:30}.logo{font-size:23px;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}.location{font-size:13px}.location span{color:var(--muted);margin:0 5px}.top-actions{display:flex;gap:10px;align-items:center}.icon-btn,.cart-btn{height:42px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:14px;padding:0 13px}.cart-btn{display:flex;gap:8px;align-items:center;font-weight:700}.cart-btn i{font-style:normal;background:var(--accent);color:#fff;border-radius:20px;min-width:21px;height:21px;display:grid;place-items:center;font-size:11px}.hero{min-height:560px;padding:70px 8% 55px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;overflow:hidden}.eyebrow{font-size:11px;letter-spacing:2.2px;color:var(--accent);font-weight:800;margin-bottom:12px}.hero h1{font:700 clamp(50px,6vw,82px)/.94 "Playfair Display",serif;letter-spacing:-3px}.hero h1 em{color:var(--accent);font-style:normal}.hero-text{max-width:540px;color:var(--muted);font-size:16px;line-height:1.7;margin:24px 0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.primary-btn,.checkout-btn{background:var(--dark);color:var(--bg);padding:15px 21px;border-radius:14px;font-weight:800}.primary-btn span,.checkout-btn span{margin-left:18px}.ghost-btn{padding:14px 18px;border:1px solid var(--line);background:transparent;color:var(--text);border-radius:14px;font-weight:700}.trust-row{display:flex;gap:22px;margin-top:27px;font-size:12px;color:var(--muted)}.hero-art{position:relative;min-height:410px;display:grid;place-items:center}.orb{position:absolute;border-radius:50%;filter:blur(2px)}.orb-one{width:300px;height:300px;background:#ffd6bc;right:8%;top:4%}.orb-two{width:160px;height:160px;background:#ffe7a7;left:8%;bottom:0}.hero-card{position:relative;width:min(410px,85%);border-radius:28px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow);transform:rotate(3deg);animation:float 5s ease-in-out infinite}.hero-card img{display:block;width:100%;height:300px;object-fit:cover}.floating-tag{position:absolute;left:18px;top:18px;background:var(--dark);color:var(--bg);padding:8px 11px;border-radius:10px;font-size:10px;font-weight:800;letter-spacing:1px}.hero-card-info{display:flex;justify-content:space-between;padding:17px 19px}.hero-card-info b{display:block}.hero-card-info small{display:block;color:var(--muted);margin-top:4px}.hero-card-info strong{font-size:18px}.mini-card{position:absolute;right:0;bottom:30px;background:var(--surface);padding:13px 16px;border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);font-size:12px}.mini-card span{display:block;color:var(--muted);margin-left:22px}.menu-section{padding:55px 7% 90px;max-width:1450px;margin:auto}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:20px}.section-heading h2{font:700 43px "Playfair Display",serif}.search-wrap{border:1px solid var(--line);border-radius:15px;padding:12px 15px;display:flex;gap:8px;background:var(--surface);width:290px}.search-wrap input{border:0;outline:0;background:none;color:var(--text);width:100%}.categories{display:flex;gap:10px;overflow:auto;padding:28px 0 22px;scrollbar-width:none}.cat{white-space:nowrap;padding:12px 18px;border:1px solid var(--line);background:var(--surface);border-radius:50px;color:var(--text);transition:.2s}.cat.active,.cat:hover{background:var(--dark);color:var(--bg);border-color:var(--dark)}.promo-strip{display:flex;align-items:center;gap:14px;background:var(--soft);border-radius:18px;padding:15px 18px;margin-bottom:30px}.promo-strip>div:first-child{font-size:25px}.promo-strip b{display:block;font-size:13px}.promo-strip span{font-size:11px;color:var(--muted)}.promo-strip button{margin-left:auto;background:transparent;color:var(--accent);font-weight:800}.food-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.food-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.25s;position:relative}.food-card:hover{transform:translateY(-5px);box-shadow:0 16px 45px rgba(30,20,10,.1)}.food-img{height:220px;width:100%;object-fit:cover}.food-info{padding:17px}.food-top{display:flex;justify-content:space-between;gap:10px}.food-top h3{font-size:17px}.price{font-weight:800}.food-info p{color:var(--muted);font-size:12px;line-height:1.55;margin:8px 0 15px;min-height:38px}.food-bottom{display:flex;justify-content:space-between;align-items:center}.pill{font-size:10px;color:var(--muted);background:var(--bg);padding:6px 8px;border-radius:7px}.add-btn{background:var(--dark);color:var(--bg);padding:9px 13px;border-radius:10px;font-weight:800}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:.25s;z-index:40}.overlay.show{opacity:1;pointer-events:auto}.cart-drawer{position:fixed;z-index:50;right:-470px;top:0;height:100vh;width:min(470px,100%);background:var(--surface);transition:.35s;box-shadow:-20px 0 70px rgba(0,0,0,.14);display:flex;flex-direction:column}.cart-drawer.open{right:0}.drawer-head{padding:28px 25px 20px;display:flex;justify-content:space-between;border-bottom:1px solid var(--line)}.drawer-head h2{font:700 30px "Playfair Display",serif}.drawer-head h2 span{font:13px "DM Sans";color:var(--muted)}.close-btn{background:var(--bg);color:var(--text);width:36px;height:36px;border-radius:11px;font-size:22px}.cart-items{flex:1;overflow:auto;padding:18px 24px}.empty{text-align:center;padding:70px 20px;color:var(--muted)}.empty .empty-icon{font-size:50px;margin-bottom:15px}.cart-item{display:grid;grid-template-columns:70px 1fr auto;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.cart-item img{width:70px;height:70px;object-fit:cover;border-radius:13px}.cart-item h4{font-size:13px}.cart-item small{color:var(--muted);display:block;margin:5px 0}.qty{display:flex;align-items:center;gap:8px}.qty button{width:23px;height:23px;border-radius:7px;background:var(--bg);color:var(--text)}.cart-price{text-align:right;font-weight:800;font-size:13px}.remove{color:#b2aaa0;background:none;font-size:11px;margin-top:8px}.cart-bottom{padding:18px 24px;border-top:1px solid var(--line)}.coupon{display:flex;margin-bottom:15px}.coupon input{flex:1;border:1px solid var(--line);padding:11px;border-radius:10px 0 0 10px;background:var(--bg);color:var(--text);outline:0}.coupon button{padding:0 14px;background:var(--dark);color:var(--bg);border-radius:0 10px 10px 0}.bill-row{display:flex;justify-content:space-between;padding:5px 0;font-size:13px}.muted{color:var(--muted)}.total{font-size:18px;border-top:1px solid var(--line);margin-top:8px;padding-top:13px}.checkout-btn{width:100%;margin-top:14px}.secure{text-align:center;color:var(--muted);font-size:10px;margin-top:10px}.modal{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.52);display:grid;place-items:center;padding:18px;opacity:0;pointer-events:none;transition:.2s}.modal.show{opacity:1;pointer-events:auto}.modal-box{width:min(850px,100%);max-height:90vh;overflow:auto;background:var(--surface);border-radius:25px;padding:28px;position:relative;box-shadow:var(--shadow)}.custom-box{width:min(540px,100%)}.custom-box .close-btn,.checkout-box>.close-btn{position:absolute;right:20px;top:20px}.custom-image{height:230px;width:100%;object-fit:cover;border-radius:18px}.custom-title{font:700 31px "Playfair Display",serif;margin:17px 0 4px}.custom-desc{color:var(--muted);font-size:13px}.option-group{margin-top:18px}.option-group>label{font-size:12px;font-weight:800;display:block;margin-bottom:9px}.options{display:flex;flex-wrap:wrap;gap:8px}.option{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font-size:12px}.option.selected{border-color:var(--accent);background:var(--soft);color:var(--accent);font-weight:800}.custom-footer{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}.custom-footer strong{font-size:20px}.checkout-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:25px;margin-top:20px}.checkout-box label{display:block;font-size:12px;font-weight:800;margin:14px 0 8px}.checkout-box input{width:100%;padding:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:10px;outline:0}.two-input{display:grid;grid-template-columns:1fr 110px;gap:8px;margin-top:8px}.choice-row,.pay-tabs{display:flex;gap:7px;flex-wrap:wrap}.choice,.pay-tab{padding:10px 12px;border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:9px;font-size:11px}.choice.active,.pay-tab.active{border-color:var(--accent);background:var(--soft);color:var(--accent);font-weight:800}.payment-fields{margin-top:9px}.order-summary{background:var(--bg);border-radius:17px;padding:18px}.order-summary h3{margin-bottom:12px}.summary-line{display:flex;justify-content:space-between;font-size:12px;padding:7px 0}.summary-line small{color:var(--muted);display:block}.summary-total{border-top:1px solid var(--line);margin-top:10px;padding-top:13px;display:flex;justify-content:space-between;font-size:18px}.success-box{text-align:center;width:min(500px,100%)}.success-icon{width:70px;height:70px;border-radius:50%;background:#dff7e9;color:#17844b;display:grid;place-items:center;font-size:36px;margin:0 auto 20px}.success-box h2{font:700 34px "Playfair Display",serif}.success-box>p{color:var(--muted);font-size:13px;margin:10px 0 20px}.tracking{display:flex;text-align:left;gap:12px;padding:13px;border:1px solid var(--line);border-radius:12px;margin:7px 0}.tracking>span{color:#27a55d}.tracking div{flex:1}.tracking b,.tracking small{display:block}.tracking small{color:var(--muted);font-size:10px;margin-top:3px}.tracking strong{font-size:11px;color:var(--accent)}.full{width:100%;margin-top:18px}.toast{position:fixed;top:90px;left:50%;transform:translate(-50%,-20px);background:var(--dark);color:var(--bg);padding:12px 17px;border-radius:12px;font-size:12px;z-index:100;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}@keyframes float{50%{transform:rotate(3deg) translateY(-9px)}}@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:45px}.hero-art{min-height:380px}.food-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.topbar{height:64px;padding:0 4%}.location{display:none}.cart-btn span{display:none}.hero{padding:42px 6% 30px}.hero h1{font-size:53px}.hero-text{font-size:14px}.hero-art{min-height:330px}.hero-card img{height:220px}.menu-section{padding:35px 5% 60px}.section-heading{display:block}.section-heading h2{font-size:36px}.search-wrap{width:100%;margin-top:18px}.food-grid{grid-template-columns:1fr}.food-img{height:230px}.promo-strip{align-items:flex-start}.promo-strip button{display:none}.checkout-grid{grid-template-columns:1fr}.checkout-box{padding:22px}.trust-row{gap:10px;flex-wrap:wrap}.mini-card{right:-5px}.hero-card{width:90%}}
+
+</style>
+</head>
+<body>
+  <div class="toast" id="toast"></div>
+
+  <header class="topbar">
+    <a class="logo" href="#"><span>✦</span> CraveCraft</a>
+    <div class="location">📍 <span>Delivering to</span> <b>Chennai</b></div>
+    <div class="top-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+      <button class="cart-btn" id="cartBtn">🛒 <span>Cart</span><i id="cartCount">0</i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">GOOD FOOD. ZERO BORING.</p>
+        <h1>Made for your<br><em>next craving.</em></h1>
+        <p class="hero-text">Mix, match and customise your favourites. From comfort classics to chef-inspired drops — your order, your rules.</p>
+        <div class="hero-actions">
+          <button class="primary-btn" onclick="scrollToMenu()">Explore menu <span>→</span></button>
+          <button class="ghost-btn" onclick="openOffers()">View today's drops</button>
+        </div>
+        <div class="trust-row"><span>⚡ 25–35 min</span><span>★ 4.8 rated</span><span>♻ Eco packaging</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="hero-card">
+          <span class="floating-tag">CHEF'S PICK</span>
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=85" alt="Pizza" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85'">
+          <div class="hero-card-info"><div><b>Truffle Garden</b><small>Wild mushroom · truffle oil</small></div><strong>₹449</strong></div>
+        </div>
+        <div class="mini-card">🔥 <b>1,200+</b><span>cravings delivered today</span></div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">WHAT'S CALLING?</p><h2>Pick your mood. <span style="font:600 13px 'DM Sans';color:var(--muted)">23 cravings</span></h2></div>
+        <div class="search-wrap">⌕<input id="searchInput" placeholder="Search pizza, burger, drink..." autocomplete="off"></div>
+      </div>
+
+      <div class="categories" id="categories"></div>
+      <div class="promo-strip"><div>🎁</div><div><b>Build any combo & save up to ₹120</b><span>Pick a main + side + drink and we'll apply the deal automatically.</span></div><button onclick="selectCategory('Combos')">Build a combo →</button></div>
+      <div class="food-grid" id="foodGrid"></div>
+    </section>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-head"><div><p class="eyebrow">YOUR ORDER</p><h2>Craving cart <span id="drawerCount">(0)</span></h2></div><button class="close-btn" id="closeCart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-bottom">
+      <div class="coupon"><input id="coupon" placeholder="Promo code"><button onclick="applyCoupon()">Apply</button></div>
+      <div class="bill-row"><span>Subtotal</span><b id="subtotal">₹0</b></div>
+      <div class="bill-row muted"><span>Delivery</span><span id="delivery">₹39</span></div>
+      <div class="bill-row muted"><span>Taxes & fees</span><span id="taxes">₹0</span></div>
+      <div class="bill-row total"><span>Total</span><strong id="total">₹0</strong></div>
+      <button class="checkout-btn" id="checkoutBtn">Continue to checkout <span>→</span></button>
+      <p class="secure">🔒 Secure checkout · UPI · Cards · Wallets · Cash</p>
+    </div>
+  </aside>
+
+  <div class="modal" id="customModal">
+    <div class="modal-box custom-box">
+      <button class="close-btn" onclick="closeModal('customModal')">×</button>
+      <div id="customContent"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal-box checkout-box">
+      <button class="close-btn" onclick="closeModal('checkoutModal')">×</button>
+      <p class="eyebrow">ALMOST THERE</p><h2>Checkout</h2>
+      <div class="checkout-grid">
+        <div>
+          <label>Delivery details</label>
+          <input id="address" placeholder="Flat / house, street, area">
+          <div class="two-input"><input id="city" value="Chennai"><input id="pin" placeholder="PIN code" inputmode="numeric"></div>
+          <label>Delivery preference</label>
+          <div class="choice-row" id="deliveryChoices">
+            <button class="choice active" data-val="Doorstep">🚪 Doorstep</button>
+            <button class="choice" data-val="Contactless">📦 Contactless</button>
+          </div>
+          <label>Payment method</label>
+          <div class="pay-tabs">
+            <button class="pay-tab active" data-pay="UPI">UPI</button><button class="pay-tab" data-pay="Card">Card</button><button class="pay-tab" data-pay="Wallet">Wallet</button><button class="pay-tab" data-pay="COD">Cash</button>
+          </div>
+          <div id="paymentFields" class="payment-fields"><input id="upi" placeholder="yourname@upi"></div>
+        </div>
+        <div class="order-summary"><h3>Order summary</h3><div id="checkoutSummary"></div><div class="summary-total"><span>Pay</span><strong id="checkoutTotal">₹0</strong></div><button class="checkout-btn" onclick="placeOrder()">Place order · <span id="payAmount">₹0</span></button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="successModal">
+    <div class="modal-box success-box">
+      <div class="success-icon">✓</div><p class="eyebrow">ORDER CONFIRMED</p><h2>Your food is on its way.</h2>
+      <p id="successText">Order #CC4821 is confirmed. We'll keep you posted.</p>
+      <div class="tracking"><span>●</span><div><b>Preparing your order</b><small>Restaurant has received it</small></div><strong>Now</strong></div>
+      <div class="tracking"><span>○</span><div><b>Out for delivery</b><small>Rider picks it up soon</small></div></div>
+      <button class="primary-btn full" onclick="closeModal('successModal'); closeCart();">Back to menu</button>
+    </div>
+  </div>
+
+  <script>
+const foods=[
+{id:1,name:"Truffle Garden",cat:"Pizza",price:449,desc:"Wild mushrooms, mozzarella, truffle oil & herbs.",tag:"Chef's pick",img:"https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Large +₹90"],crust:["Classic +₹0","Thin & crispy +₹20","Cheese burst +₹65"],extras:["Extra cheese +₹40","Jalapeño +₹20","Olives +₹25"]}},
+{id:2,name:"Smoky Fire Chicken",cat:"Pizza",price:469,desc:"Smoked chicken, roasted peppers, chilli honey & cheese.",tag:"Spicy",img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Large +₹90"],crust:["Classic +₹0","Thin & crispy +₹20","Cheese burst +₹65"],extras:["Extra chicken +₹70","Jalapeño +₹20","Extra cheese +₹40"]}},
+{id:10,name:"Margherita Melt",cat:"Pizza",price:299,desc:"Classic tomato, basil and stretchy mozzarella.",tag:"Classic",img:"https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Large +₹70"],crust:["Classic +₹0","Thin & crispy +₹20"],extras:["Extra cheese +₹40","Olives +₹25"]}},
+{id:11,name:"BBQ Chicken Ranch",cat:"Pizza",price:489,desc:"BBQ chicken, red onion, mozzarella and ranch drizzle.",tag:"Popular",img:"https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Large +₹90"],crust:["Classic +₹0","Cheese burst +₹65"],extras:["Extra chicken +₹70","Extra cheese +₹40"]}},
+{id:12,name:"Pesto Corn & Spinach",cat:"Pizza",price:379,desc:"Creamy pesto base, sweet corn, spinach and mozzarella.",tag:"Veg",img:"https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Large +₹80"],crust:["Classic +₹0","Thin & crispy +₹20"],extras:["Extra cheese +₹40","Jalapeño +₹20"]}},
+
+{id:3,name:"Midnight Smash",cat:"Burgers",price:329,desc:"Double smashed patty, caramelised onion, house sauce.",tag:"Best seller",img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=85",opts:{size:["Single +₹0","Double +₹80"],bun:["Brioche +₹0","Sesame +₹0"],extras:["Cheese +₹35","Jalapeño +₹20","Crispy onion +₹25"]}},
+{id:4,name:"Crispy Paneer Stack",cat:"Burgers",price:289,desc:"Crunchy paneer, slaw, pickles and smoky mayo.",tag:"Veg",img:"https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Double paneer +₹65"],spice:["Mild +₹0","Hot +₹10"],extras:["Cheese +₹35","Pickles +₹15"]}},
+{id:13,name:"Classic Chicken Burger",cat:"Burgers",price:299,desc:"Crispy chicken, lettuce, tomato and signature mayo.",tag:"Crispy",img:"https://images.unsplash.com/photo-1606755962773-0c1c8b0f0b5b?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Double +₹75"],bun:["Brioche +₹0","Sesame +₹0"],extras:["Cheese +₹35","Bacon-style crispy topping +₹35"]}},
+{id:14,name:"Fiery Jalapeño Burger",cat:"Burgers",price:349,desc:"Spiced patty, jalapeño, pepper jack and hot sauce.",tag:"Hot",img:"https://images.unsplash.com/photo-1553979459-d2229ba7433a?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Double +₹80"],spice:["Hot +₹0","Extra hot +₹10"],extras:["Cheese +₹35","Jalapeño +₹20"]}},
+
+{id:5,name:"Loaded Peri Peri Fries",cat:"Sides",price:169,desc:"Crispy fries tossed in peri peri dust with creamy dip.",tag:"Shareable",img:"https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Large +₹45"],dip:["Garlic mayo +₹0","Cheese dip +₹25","Peri peri mayo +₹15"]}},
+
+{id:16,name:"Crispy Chicken Bites",cat:"Sides",price:239,desc:"Golden chicken bites with your choice of dipping sauce.",tag:"Crunchy",img:"https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=700&q=85",opts:{size:["6 pcs +₹0","10 pcs +₹80"],dip:["BBQ +₹0","Cheese +₹25","Spicy mayo +₹15"]}},
+{id:17,name:"Mozzarella Sticks",cat:"Sides",price:219,desc:"Crispy crumb-coated mozzarella with marinara dip.",tag:"Pull apart",img:"https://images.unsplash.com/photo-1548340748-6d2b7d7a7f6a?auto=format&fit=crop&w=700&q=85",opts:{size:["5 pcs +₹0","8 pcs +₹65"],dip:["Marinara +₹0","Garlic mayo +₹15"]}},
+
+{id:6,name:"Citrus Mint Fizz",cat:"Drinks",price:129,desc:"Sparkling citrus, fresh mint and a little zing.",tag:"Refreshing",img:"https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Large +₹30"],ice:["Regular ice +₹0","Less ice +₹0","No ice +₹0"]}},
+{id:7,name:"Mango Cloud",cat:"Drinks",price:159,desc:"Velvety mango, vanilla cream and crushed ice.",tag:"New",img:"https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Large +₹35"],sweet:["Classic +₹0","Less sweet +₹0"]}},
+{id:18,name:"Cold Coffee Crush",cat:"Drinks",price:179,desc:"Cold-brew style coffee blended with creamy ice.",tag:"Chilled",img:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Large +₹35"],sweet:["Classic +₹0","Less sweet +₹0"],extras:["Whipped cream +₹25","Caramel +₹20"]}},
+{id:19,name:"Berry Sparkler",cat:"Drinks",price:149,desc:"Berry syrup, sparkling water, lime and mint.",tag:"Fruity",img:"https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=700&q=85",opts:{size:["Regular +₹0","Large +₹30"],ice:["Regular ice +₹0","Less ice +₹0","No ice +₹0"]}},
+
+{id:8,name:"Choco Lava Jar",cat:"Desserts",price:199,desc:"Warm chocolate cake, molten centre and vanilla cream.",tag:"Sweet",img:"https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=85",opts:{extras:["Extra chocolate +₹25","Vanilla cream +₹20"]}},
+{id:20,name:"Biscoff Cheesecake",cat:"Desserts",price:229,desc:"Creamy cheesecake layered with caramelised biscuit crumbs.",tag:"Fan favourite",img:"https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=700&q=85",opts:{extras:["Biscoff sauce +₹25","Whipped cream +₹20"]}},
+{id:21,name:"Brownie & Ice Cream",cat:"Desserts",price:249,desc:"Warm fudge brownie paired with a scoop of vanilla.",tag:"Comfort",img:"https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&w=700&q=85",opts:{extras:["Chocolate sauce +₹20","Nuts +₹20"]}},
+
+{id:9,name:"Crunchy Taco Trio",cat:"Combos",price:399,desc:"Three crispy tacos + fries + your choice of drink.",tag:"Combo deal",img:"https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=700&q=85",opts:{filling:["Paneer +₹0","Chicken +₹30"],drink:["Citrus Fizz +₹0","Mango Cloud +₹20"]}},
+{id:22,name:"Burger Night Combo",cat:"Combos",price:449,desc:"Signature burger, loaded fries and a chilled drink.",tag:"Save ₹90",img:"https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=700&q=85",opts:{burger:["Midnight Smash +₹0","Paneer Stack +₹0"],drink:["Citrus Fizz +₹0","Mango Cloud +₹20"]}},
+{id:23,name:"Pizza Party Box",cat:"Combos",price:799,desc:"Large pizza, garlic bread, fries and two drinks.",tag:"For 2–3",img:"https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=85",opts:{pizza:["Margherita +₹0","Truffle Garden +₹120","Smoky Fire Chicken +₹140"],drinks:["2 Citrus Fizz +₹0","2 Mango Cloud +₹40"]}}
+];
+const cats=["All","Pizza","Burgers","Sides","Drinks","Desserts","Combos"];
+let activeCat="All",cart=[],currentFood=null,currentSelections={},discount=0;
+const $=id=>document.getElementById(id);
+function money(n){return "₹"+Math.round(n)}
+function renderCats(){ $("categories").innerHTML=cats.map(c=>`<button class="cat ${c===activeCat?'active':''}" onclick="selectCategory('${c}')">${c}</button>`).join("")}
+function renderFoods(){
+ const q=$("searchInput").value.toLowerCase();
+ const list=foods.filter(f=>(activeCat==="All"||f.cat===activeCat)&&(f.name+" "+f.desc+" "+f.cat).toLowerCase().includes(q));
+ $("foodGrid").innerHTML=list.map(f=>`<article class="food-card"><img class="food-img" src="${f.img}" alt="${f.name}" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85'"><div class="food-info"><div class="food-top"><h3>${f.name}</h3><span class="price">${money(f.price)}</span></div><p>${f.desc}</p><div class="food-bottom"><span class="pill">${f.tag}</span><button class="add-btn" onclick="openCustom(${f.id})">+ Add</button></div></div></article>`).join("")||`<div class="empty" style="grid-column:1/-1"><div class="empty-icon">🍽️</div>No cravings found. Try another search.</div>`;
+}
+function selectCategory(c){activeCat=c;renderCats();renderFoods();document.querySelector("#menu").scrollIntoView({behavior:"smooth",block:"start"})}
+function scrollToMenu(){document.querySelector("#menu").scrollIntoView({behavior:"smooth"})}
+$("searchInput").addEventListener("input",renderFoods);
+function openCustom(id){
+ currentFood=foods.find(f=>f.id===id); currentSelections={};
+ let optionHtml=Object.entries(currentFood.opts).map(([group,vals])=>`<div class="option-group"><label>${group.toUpperCase()}</label><div class="options">${vals.map((v,i)=>`<button class="option ${i===0?'selected':''}" data-group="${group}" data-value="${v}" onclick="chooseOption(this)">${v}</button>`).join("")}</div></div>`).join("");
+ Object.entries(currentFood.opts).forEach(([g,vals])=>currentSelections[g]=vals[0]);
+ $("customContent").innerHTML=`<img class="custom-image" src="${currentFood.img}" alt="${currentFood.name}" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85'"><h2 class="custom-title">${currentFood.name}</h2><p class="custom-desc">${currentFood.desc}</p>${optionHtml}<div class="custom-footer"><strong id="customPrice">${money(currentFood.price)}</strong><button class="primary-btn" onclick="addCustom()">Add to cart <span>→</span></button></div>`;
+ $("customModal").classList.add("show")
+}
+function chooseOption(el){el.parentElement.querySelectorAll(".option").forEach(x=>x.classList.remove("selected"));el.classList.add("selected");currentSelections[el.dataset.group]=el.dataset.value;$("customPrice").textContent=money(calcSelectionPrice())}
+function calcSelectionPrice(){return currentFood.price+Object.values(currentSelections).reduce((sum,v)=>{let m=v.match(/₹(\d+)/);return sum+(m?+m[1]:0)},0)}
+function addCustom(){
+ const price=calcSelectionPrice(),custom=Object.entries(currentSelections).map(([k,v])=>k+": "+v.replace(/\s*\+\₹\d+/,"")).join(" · ");
+ const key=currentFood.id+"|"+custom;
+ const found=cart.find(x=>x.key===key); if(found)found.qty++; else cart.push({key,id:currentFood.id,name:currentFood.name,price,img:currentFood.img,custom,qty:1});
+ closeModal("customModal");updateCart();toast(currentFood.name+" added to your cart");
+}
+function updateCart(){
+ const count=cart.reduce((s,x)=>s+x.qty,0);$("cartCount").textContent=count;$("drawerCount").textContent=`(${count})`;
+ if(!cart.length){$("cartItems").innerHTML=`<div class="empty"><div class="empty-icon">🛒</div><b>Your cart is waiting.</b><p>Add something delicious and it will appear here.</p></div>`}
+ else $("cartItems").innerHTML=cart.map((x,i)=>`<div class="cart-item"><img src="${x.img}" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85'"><div><h4>${x.name}</h4><small>${x.custom}</small><div class="qty"><button onclick="changeQty(${i},-1)">−</button><span>${x.qty}</span><button onclick="changeQty(${i},1)">+</button></div></div><div class="cart-price">${money(x.price*x.qty)}<button class="remove" onclick="removeItem(${i})">Remove</button></div></div>`).join("");
+ const sub=cart.reduce((s,x)=>s+x.price*x.qty,0),tax=Math.round(sub*.05),del=sub?39:0,total=Math.max(0,sub+tax+del-discount);
+ $("subtotal").textContent=money(sub);$("taxes").textContent=money(tax);$("delivery").textContent=money(del);$("total").textContent=money(total); $("checkoutTotal").textContent=money(total);$("payAmount").textContent=money(total);
+}
+function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);updateCart()}
+function removeItem(i){cart.splice(i,1);updateCart();toast("Item removed")}
+function openCart(){$("cartDrawer").classList.add("open");$("overlay").classList.add("show")}
+function closeCart(){$("cartDrawer").classList.remove("open");$("overlay").classList.remove("show")}
+$("cartBtn").onclick=openCart;$("closeCart").onclick=closeCart;$("overlay").onclick=closeCart;
+function applyCoupon(){let c=$("coupon").value.trim().toUpperCase();if(c==="CRAVE50"){discount=50;toast("₹50 promo applied")}else if(c){discount=0;toast("Try CRAVE50 for ₹50 off")}else discount=0;updateCart()}
+$("checkoutBtn").onclick=()=>{if(!cart.length){toast("Your cart is empty");return}renderCheckout();$("checkoutModal").classList.add("show")}
+function renderCheckout(){$("checkoutSummary").innerHTML=cart.map(x=>`<div class="summary-line"><div>${x.name} × ${x.qty}<small>${x.custom}</small></div><b>${money(x.price*x.qty)}</b></div>`).join("")}
+function closeModal(id){$(id).classList.remove("show")}
+document.querySelectorAll(".pay-tab").forEach(btn=>btn.onclick=()=>{document.querySelectorAll(".pay-tab").forEach(b=>b.classList.remove("active"));btn.classList.add("active");let p=btn.dataset.pay;$("paymentFields").innerHTML=p==="UPI"?`<input id="upi" placeholder="yourname@upi">`:p==="Card"?`<div class="two-input"><input placeholder="Card number" inputmode="numeric"><input placeholder="MM/YY"></div><input style="margin-top:8px" placeholder="Name on card">`:p==="Wallet"?`<div class="choice-row"><button class="choice active">PhonePe</button><button class="choice">Paytm</button><button class="choice">Amazon Pay</button></div>`:`<p style="font-size:12px;color:var(--muted);padding:10px 0">Pay cash when your order arrives.</p>`});
+document.querySelectorAll(".choice").forEach(btn=>btn.addEventListener("click",()=>{btn.parentElement.querySelectorAll(".choice").forEach(b=>b.classList.remove("active"));btn.classList.add("active")}));
+function placeOrder(){
+ const address=$("address").value.trim(),pin=$("pin").value.trim();
+ if(!address||pin.length<4){toast("Please enter your delivery address and PIN");return}
+ const num=Math.floor(1000+Math.random()*8999);$("successText").textContent=`Order #CC${num} is confirmed. Estimated arrival: 25–35 minutes.`;
+ closeModal("checkoutModal");cart=[];discount=0;updateCart();$("successModal").classList.add("show");
+}
+function openOffers(){toast("Today's drop: use CRAVE50 for ₹50 off")}
+function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");clearTimeout(window.__toast);window.__toast=setTimeout(()=>$("toast").classList.remove("show"),2200)}
+$("themeBtn").onclick=()=>{document.body.classList.toggle("dark");$("themeBtn").textContent=document.body.classList.contains("dark")?"☀":"☾"}
+renderCats();renderFoods();updateCart();
+
+</script>
+</body>
+</html>
